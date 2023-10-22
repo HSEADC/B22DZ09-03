@@ -102,6 +102,10 @@ module.exports = {
 
     // Section
     new HtmlWebpackPlugin({
+      template: './src/about.html',
+      filename: './about.html'
+    }),
+    new HtmlWebpackPlugin({
       template: './src/places.html',
       filename: './places.html'
     }),
