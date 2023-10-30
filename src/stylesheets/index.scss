@@ -1,16 +1,9 @@
 body.index {
-  display: grid;
-
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-areas:
-    'header header header'
-    'border border .'
-    'border border .'
-    'border border .'
-    'input input button';
-  grid-auto-flow: column;
-
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  max-width: 1650px;
+  margin: 0 auto;
 
   justify-content: center;
   background-color: var(--black);
@@ -24,6 +17,12 @@ body.index {
     text-align: center;
   }
   p {
+    text-align: center;
+    font-family: Pragmatica;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
     color: var(--white);
   }
   .logo {
@@ -31,51 +30,73 @@ body.index {
     height: 60px;
     background-image: url('images/logo.svg');
   }
+  #my-form {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 810px;
+    margin: 400px auto;
+    gap: 30px;
+  }
   #my-form-button {
     height: 120px;
     background-color: var(--accent);
     border: none;
-    grid-area: button;
+    width: 530px;
     font-size: 30px;
     &:hover {
       background: var(--additional);
       color: var(--white);
     }
   }
+
   input {
+    box-sizing: border-box;
     height: 120px;
-    grid-area: input;
+    padding: 50px;
+    width: 1090px;
   }
+  input::placeholder {
+    font-family: Pragmatica;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(24, 24, 24, 0.5);
+  }
+
   header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    grid-area: header;
   }
   .border {
-    position: relative;
     display: flex;
     justify-content: center;
-    max-height: 600px;
+    height: 600px;
+    max-width: 1066px;
     border: 20px solid var(--additional);
-    grid-area: border;
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
   }
   .text_block {
     display: flex;
+    max-width: 700px;
+    max-height: 95px;
+    margin: 0 auto;
+    padding: 20px;
     justify-content: center;
     align-items: center;
-    height: 60px;
     background: var(--additional);
   }
   .tb2 {
-    position: absolute;
     max-width: 935px;
-    bottom: 60px;
+    margin: 400px auto 0;
   }
   .tb3 {
-    position: absolute;
     max-width: 287px;
-    bottom: 0;
   }
   .container {
     position: relative;
@@ -102,7 +123,6 @@ body.index {
     // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
     display: flex;
   }
-
   .carousel__face:nth-child(1) {
     background-image: url('images/lantern.png');
     transform: rotateY(0deg) translateZ(430px);

@@ -8,16 +8,21 @@
   <body class="index">
     <header>
       <div class="logo"></div>
+      <a href="about.html"> <p>О проекте</p></a>
     </header>
 
     <!-- carousel from images -->
 
     <div class="border">
-      <div class="text_block"><p>Медиа о городских легендах Москвы</p></div>
-      <div class="text_block tb2">
-        <h1>Чтобы не пропустить запуск, оставь свою почту</h1>
+      <div class="text_block">
+        <p>Медиа о городских легендах Москвы</p>
       </div>
-      <div class="text_block tb3"><h1>или телеграм</h1></div>
+      <div class="blocks">
+        <div class="text_block tb2">
+          <h1>Чтобы не пропустить запуск, оставь свою почту</h1>
+        </div>
+        <div class="text_block tb3"><h1>или телеграм</h1></div>
+      </div>
     </div>
     <div class="container">
       <div class="carousel">
@@ -29,10 +34,11 @@
         <div class="carousel__face"></div>
       </div>
     </div>
+
     <!-- modify this form HTML and place wherever you want your form -->
     <form id="my-form" action="https://formspree.io/f/xrgwjerq" method="POST">
       <!-- <label>Email:</label> -->
-      <input type="text" name="message" />
+      <input type="text" name="message" placeholder="Почта или телеграм" />
       <button id="my-form-button">Хочу узнать о запуске</button>
       <p id="my-form-status"></p>
     </form>
