@@ -64,11 +64,16 @@ body.index {
     line-height: 120%;
     color: rgba(24, 24, 24, 0.5);
   }
-
+  .vk:hover,
+  .tg:hover {
+    background: var(--accent);
+  }
   header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 45px;
   }
   .border {
     display: flex;
@@ -80,6 +85,15 @@ body.index {
   }
   a {
     text-decoration: none;
+  }
+  .project {
+    font-size: 20px;
+    margin-left: 40px;
+    padding: 20px;
+    &:hover {
+      background: var(--accent);
+      color: var(--black);
+    }
   }
   .text_block {
     display: flex;
