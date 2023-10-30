@@ -321,7 +321,8 @@ body.about {
       color: var(--accent);
     }
   }
-  .social:hover {
+  .vk:hover,
+  .tg:hover {
     background: var(--additional);
   }
   // .circle-cursor {
