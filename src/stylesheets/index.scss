@@ -1,7 +1,159 @@
 body.index {
-  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1650px;
+  margin: 0 auto;
+
+  justify-content: center;
+  background-color: var(--black);
+  h1,
+  p {
+    font-family: 'Pragmatica';
+  }
   h1 {
-    font-size: 100px;
-    color: white;
+    font-size: 40px;
+    color: var(--white);
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-family: Pragmatica;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--white);
+  }
+  .logo {
+    width: 120px;
+    height: 60px;
+    background-image: url('images/logo.svg');
+  }
+  #my-form {
+    display: flex;
+    flex-direction: row;
+
+    max-width: 810px;
+    margin: 400px auto;
+    gap: 30px;
+  }
+  #my-form-button {
+    height: 120px;
+    background-color: var(--accent);
+    border: none;
+    width: 530px;
+    font-size: 30px;
+    &:hover {
+      background: var(--additional);
+      color: var(--white);
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+    height: 120px;
+    padding: 50px;
+    width: 1090px;
+  }
+  input::placeholder {
+    font-family: Pragmatica;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: rgba(24, 24, 24, 0.5);
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .border {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    max-width: 1066px;
+    border: 20px solid var(--additional);
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .text_block {
+    display: flex;
+    max-width: 700px;
+    max-height: 95px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background: var(--additional);
+  }
+  .tb2 {
+    max-width: 935px;
+    margin: 400px auto 0;
+  }
+  .tb3 {
+    max-width: 287px;
+  }
+  .container {
+    position: relative;
+    width: 320px;
+    margin: -400px auto 0 auto;
+    perspective: 1000px;
+  }
+
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face {
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+  .carousel__face:nth-child(1) {
+    background-image: url('images/lantern.png');
+    transform: rotateY(0deg) translateZ(430px);
+  }
+  .carousel__face:nth-child(2) {
+    background-image: url('images/street.png');
+    transform: rotateY(60deg) translateZ(430px);
+  }
+  .carousel__face:nth-child(3) {
+    background-image: url('images/tsaritsyno.png');
+    transform: rotateY(100deg) translateZ(430px);
+  }
+  .carousel__face:nth-child(4) {
+    background-image: url('images/khitrovka.png');
+    transform: rotateY(160deg) translateZ(430px);
+  }
+  .carousel__face:nth-child(5) {
+    background-image: url('images/kremlin.png');
+    transform: rotateY(200deg) translateZ(430px);
+  }
+  .carousel__face:nth-child(6) {
+    background-image: url('images/сhancellery.png');
+    transform: rotateY(260deg) translateZ(430px);
+  }
+
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-720deg);
+    }
   }
 }
