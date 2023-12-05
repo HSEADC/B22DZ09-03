@@ -1,0 +1,1 @@
+body{background:aqua}.icon:first-child svg:hover g path:first-of-type{fill:#2aabee}.icon:nth-child(2) svg:hover g path:first-of-type{fill:#07f}.icon:nth-child(3) svg:hover path:first-of-type{fill:#ff0302}.btn{background:transparent;border:2px solid;border-radius:10px;color:#888;padding:10px 14px}.btn:hover{color:red}.rect2{height:calc(56.25vw - 45px)}
