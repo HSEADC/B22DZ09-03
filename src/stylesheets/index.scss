@@ -1,173 +1,148 @@
 body.index {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
   max-width: 1650px;
   margin: 0 auto;
 
-  justify-content: center;
   background-color: var(--black);
-  h1,
-  p {
-    font-family: 'Pragmatica';
-  }
-  h1 {
-    font-size: 40px;
-    color: var(--white);
+
+  h2 {
+    color: var(--accent, #e4f964);
     text-align: center;
-  }
-  p {
-    text-align: center;
-    font-family: Pragmatica;
-    font-size: 40px;
+    font-family: Vela Sans;
+    font-size: 80px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    color: var(--white);
   }
-  .logo {
-    width: 120px;
-    height: 60px;
-    background-image: url('images/logo.svg');
-  }
-  #my-form {
-    display: flex;
-    flex-direction: row;
-
-    max-width: 810px;
-    margin: 400px auto;
-    gap: 30px;
-  }
-  #my-form-button {
-    height: 120px;
-    background-color: var(--accent);
-    border: none;
-    width: 530px;
-    font-size: 30px;
-    &:hover {
-      background: var(--additional);
-      color: var(--white);
-    }
-  }
-
-  input {
-    box-sizing: border-box;
-    height: 120px;
-    padding: 50px;
-    width: 1090px;
-  }
-  input::placeholder {
-    font-family: Pragmatica;
-    font-size: 32px;
+  h3 {
+    font-family: Vela Sans;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    color: rgba(24, 24, 24, 0.5);
+    color: var(--white);
   }
-  .vk:hover,
-  .tg:hover {
-    background: var(--accent);
+  p {
+    font-family: Vela Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--white);
   }
+  .text_line h3:nth-of-type(1) {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   header {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 45px;
-  }
-  .border {
-    display: flex;
-    justify-content: center;
-    height: 600px;
-    max-width: 1066px;
-    border: 20px solid var(--additional);
-    margin: 0 auto;
-  }
-  a {
-    text-decoration: none;
-  }
-  .project {
-    font-size: 20px;
-    margin-left: 40px;
-    padding: 20px;
-    &:hover {
-      background: var(--accent);
-      color: var(--black);
-    }
-  }
-  .text_block {
-    display: flex;
-    max-width: 700px;
-    max-height: 95px;
-    margin: 0 auto;
-    padding: 20px;
-    justify-content: center;
     align-items: center;
-    background: var(--additional);
   }
-  .tb2 {
-    max-width: 935px;
-    margin: 400px auto 0;
-  }
-  .tb3 {
-    max-width: 287px;
-  }
-  .container {
-    position: relative;
-    width: 320px;
-    margin: -400px auto 0 auto;
-    perspective: 1000px;
-  }
-
-  .carousel {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    animation: rotate360 60s infinite forwards linear;
-  }
-  .carousel__face {
-    position: absolute;
-    width: 300px;
-    height: 187px;
-    top: 20px;
-    left: 10px;
-    right: 10px;
-    background-size: cover;
-    // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  .social {
     display: flex;
+    gap: 16px;
   }
-  .carousel__face:nth-child(1) {
-    background-image: url('images/lantern.png');
-    transform: rotateY(0deg) translateZ(430px);
+  .logo:nth-child(1) svg:hover g path:first-of-type {
+    fill: #e4f964;
   }
-  .carousel__face:nth-child(2) {
-    background-image: url('images/street.png');
-    transform: rotateY(60deg) translateZ(430px);
+  .vk:nth-child(1) svg:hover path:first-of-type {
+    fill: #e4f964;
   }
-  .carousel__face:nth-child(3) {
-    background-image: url('images/tsaritsyno.png');
-    transform: rotateY(100deg) translateZ(430px);
+  .tg:nth-child(2) svg:hover path:first-of-type {
+    fill: #e4f964;
   }
-  .carousel__face:nth-child(4) {
-    background-image: url('images/khitrovka.png');
-    transform: rotateY(160deg) translateZ(430px);
+  section {
+    margin-bottom: 120px;
   }
-  .carousel__face:nth-child(5) {
-    background-image: url('images/kremlin.png');
-    transform: rotateY(200deg) translateZ(430px);
+  .cover {
+    display: grid;
+    grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six];
+    grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
   }
-  .carousel__face:nth-child(6) {
-    background-image: url('images/сhancellery.png');
-    transform: rotateY(260deg) translateZ(430px);
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: four;
+    grid-row-start: row1-end;
+    grid-row-end: 3;
   }
-
-  @keyframes rotate360 {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(-720deg);
-    }
+  .text_line {
+    display: flex;
+    justify-content: space-between;
+  }
+  .block_line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 16px;
+  }
+  .sections {
+    display: grid;
+    grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve];
+    grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+  }
+  .sections_items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column-start: 1;
+    grid-column-end: four;
+  }
+  .sections_items p:hover {
+    color: var(--accent);
+    transition: all 0.2s;
+  }
+  .story {
+    grid-column-start: 4;
+    grid-column-end: 12;
+    grid-row-start: row1-start;
+    grid-row-end: 4;
+  }
+  .img {
+    position: relative;
+  }
+  .img img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .img img:nth-of-type(2):hover {
+    opacity: 1;
+    transition: all 0.2s;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: [one] 1fr [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve];
+    grid-template-rows: [row1-start] 1fr [row1-end] 1fr 1fr;
+  }
+  .form h2 {
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+  input {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: row1-end;
+    grid-row-end: 3;
+    border: none;
+  }
+  .input_button {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 12;
+  }
+  #my-form {
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: row1-end;
+    grid-row-end: 3;
+  }
+  #my-form-button {
+    background: none;
+    border: none;
+    grid-column-start: 11;
+    grid-column-end: 12;
   }
 }
