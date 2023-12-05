@@ -1,0 +1,26 @@
+body {
+  background: aqua;
+}
+.icon:nth-child(1) svg:hover g path:first-of-type {
+  fill: #2aabee;
+}
+.icon:nth-child(2) svg:hover g path:first-of-type {
+  fill: #0077ff;
+}
+.icon:nth-child(3) svg:hover path:first-of-type {
+  fill: #ff0302;
+}
+.btn {
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #888;
+  background: transparent;
+}
+
+.btn:hover {
+  color: red;
+}
+.rect2 {
+  height: calc((100vw - 80px) / 16 * 9);
+}
