@@ -134,20 +134,20 @@ module.exports = {
 
     // Article
     new HtmlWebpackPlugin({
-      template: './src/places/metro.html',
-      filename: './places/metro.html',
+      template: './src/places/moskva_istor.html',
+      filename: './places/moskva_istor.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/legends/metro_2.html',
-      filename: './legends/metro_2.html',
+      template: './src/legends/podval_tk.html',
+      filename: './legends/podval_tk.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/characters/sculpture_dog.html',
-      filename: './characters/sculpture_dog.html',
+      template: './src/characters/krovavaya_barinya.html',
+      filename: './characters/krovavaya_barinya.html',
       chunks: ['index']
     }),
     // Partials
@@ -155,6 +155,22 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/menu.html'),
+        location: 'menu',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       }

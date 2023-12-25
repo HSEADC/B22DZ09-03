@@ -1,11 +1,9 @@
 body.legends {
-  background-color: var(--green);
-  article {
-    width: 600px;
-    margin: 0 auto;
-
-    h1 {
-      font-size: 48px;
-    }
-  }
+  display: grid;
+  grid-template-columns: 14;
+  gap: 30px;
+  max-width: 1650px;
+  margin: 0 auto;
+  color: var(--white);
+  background-color: var(--black);
 }
