@@ -1,0 +1,42 @@
+div.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Pragmatica;
+
+  .item {
+    display: inline;
+  }
+
+  .text {
+    width: 34vw;
+    font-size: 1.25vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8vw;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  a:hover {
+    color: var(--dark);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  a:hover svg {
+    opacity: 0.8;
+  }
+
+  svg {
+    height: 100%;
+  }
+
+  .search svg {
+    height: 1.4vw;
+    margin-top: 0.8vw;
+  }
+}
