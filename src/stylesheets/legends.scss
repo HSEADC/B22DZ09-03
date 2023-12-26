@@ -15,7 +15,7 @@ body.legends {
   .menu {
     grid-column: 2 / 14;
     grid-row: 1 / 2;
-    margin-top: 1.8vw;
+    margin-top: 0.8vw;
   }
 
   .footer {
@@ -77,7 +77,7 @@ body.legends {
   }
 
   a:hover {
-    color: var(--dark);
+    opacity: 0.8;
     cursor: pointer;
     transition: 0.3s;
   }

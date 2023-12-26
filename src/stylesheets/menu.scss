@@ -24,9 +24,9 @@ div.menu {
   }
 
   a:hover {
-    color: var(--dark);
+    opacity: 0.8;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   a:hover svg {
