@@ -1,7 +1,5 @@
 body.legends {
   display: grid;
-  // flex-wrap: wrap;
-  // grid-auto-flow: row;
   width: 100vw;
   height: 100vh;
   grid-template-columns: repeat(14, 1fr);
@@ -81,7 +79,7 @@ body.legends {
   a:hover {
     color: var(--dark);
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .tags {
@@ -278,7 +276,7 @@ body.legends {
 
   img:hover {
     opacity: 0.8;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
   }
 
@@ -309,7 +307,7 @@ body.legends {
 
   img:hover {
     opacity: 0.8;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
   }
 
@@ -335,7 +333,7 @@ body.legends {
 
   img:hover {
     opacity: 0.8;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
   }
 
@@ -359,7 +357,7 @@ body.legends {
 
   img:hover {
     opacity: 0.8;
-    transition: 0.5s;
+    transition: 0.3s;
     cursor: pointer;
   }
 

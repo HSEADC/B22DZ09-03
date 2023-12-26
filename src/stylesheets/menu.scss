@@ -5,7 +5,9 @@ div.menu {
   font-family: Pragmatica;
 
   .item {
-    display: inline;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.8vw;
   }
 
   .text {
@@ -37,6 +39,6 @@ div.menu {
 
   .search svg {
     height: 1.4vw;
-    margin-top: 0.8vw;
+    padding-top: 0.8vw;
   }
 }

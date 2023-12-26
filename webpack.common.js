@@ -143,6 +143,13 @@ module.exports = {
       filename: './characters/krovavaya_barinya.html',
       chunks: ['index']
     }),
+
+    new HtmlWebpackPlugin({
+      template: './src/tips/nos_sobaki.html',
+      filename: './tips/nos_sobaki.html',
+      chunks: ['index']
+    }),
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {
