@@ -1,0 +1,21 @@
+div.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Pragmatica;
+
+  p {
+    width: 12vw;
+    font-size: 1.25vw;
+    line-height: 130%;
+  }
+
+  .vk:nth-child(1) svg:hover path:first-of-type {
+    fill: #e4f964;
+    transition: 0.3s;
+  }
+  .tg:nth-child(2) svg:hover path:first-of-type {
+    fill: #e4f964;
+    transition: 0.3s;
+  }
+}
