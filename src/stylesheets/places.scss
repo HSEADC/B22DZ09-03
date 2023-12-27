@@ -20,7 +20,7 @@ body.places {
 
   .footer {
     grid-column: 2 / 14;
-    grid-row: 42 / 43;
+    grid-row: 45 / 46;
   }
 
   .cover {
@@ -178,7 +178,7 @@ body.places {
   // 2 КАРТОЧКА
   .description-2 {
     grid-column: 8 / 14;
-    grid-row: 22 / 28;
+    grid-row: 23 / 29;
 
     p {
       padding-top: 4vw;
@@ -188,18 +188,18 @@ body.places {
 
   .description-2 + img {
     grid-column: 1 / 7;
-    grid-row: 22 / 28;
+    grid-row: 23 / 29;
     width: 100%;
-    height: 31.3vw;
+    height: 90%;
   }
 
   .caption {
     grid-column: 1 / 7;
-    grid-row: 26 / 27;
+    grid-row: 27 / 28;
     height: 5.5vw;
     width: 27.6vw;
     background-color: var(--black);
-    margin-top: 1.5vw;
+    margin-top: 4.5vw;
     z-index: 5;
     p {
       font-size: 1.25vw;
@@ -210,18 +210,18 @@ body.places {
   // 3 КАРТОЧКА
   .p3 {
     grid-column: 2 / 14;
-    grid-row: 28 / 34;
+    grid-row: 30 / 36;
   }
 
   .v3 {
     grid-column: 2 / 14;
-    grid-row: 28 / 34;
+    grid-row: 30 / 36;
   }
 
   // 4 КАРТОЧКА
   .description-3 {
     grid-column: 2 / 8;
-    grid-row: 36 / 42;
+    grid-row: 38 / 44;
 
     p {
       padding-top: 4vw;
@@ -231,16 +231,42 @@ body.places {
 
   .description-3 + img {
     grid-column: 9 / 15;
-    grid-row: 36 / 42;
+    grid-row: 38 / 44;
     width: 100%;
-    height: 31.3vw;
+    height: 90%;
   }
 
   .c3 {
-    grid-column: 9 / 15;
-    grid-row: 40 / 41;
+    grid-column: 10 / 15;
+    grid-row: 42 / 43;
+    width: 100%;
+
     p {
       padding: 0.9vw 0 0 1.6vw;
     }
+  }
+
+  .line-1 {
+    grid-column: 1 / 4;
+    grid-row: 15;
+    border-top: 3px solid white;
+    margin-top: 8.1vw;
+  }
+
+  .line-2 {
+    grid-column: 9;
+    grid-row: 43 / 45;
+    border-left: 3px solid white;
+  }
+
+  .line-3 {
+    grid-column: 1 / 15;
+    grid-row: 44;
+    border-bottom: 3px solid white;
+    margin-top: -5vw;
+  }
+
+  img {
+    z-index: 3;
   }
 }
