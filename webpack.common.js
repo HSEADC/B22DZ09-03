@@ -107,6 +107,12 @@ module.exports = {
       filename: './index.html',
       chunks: ['index']
     }),
+    //  Guideline
+    // new HtmlWebpackPlugin({
+    //   template: './src/guideline.html',
+    //   filename: './guideline.html',
+    //   chunks: ['index']
+    // }),
     //Theory chunk
     new HtmlWebpackPlugin({
       template: './src/theory.html',
