@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
@@ -67,17 +68,10 @@ module.exports = {
         type: 'asset/source'
       },
       {
-        test: /\.png/,
+        test: /\.(png|svg|jpeg|jpg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[hash][ext][query]'
-        }
-      },
-      {
-        test: /\.svg/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[hash][ext][query]'
+          filename: 'images/[name].[hash][ext][query]'
         }
       },
       {
@@ -90,6 +84,18 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'dev_build/share/')
+        },
+        {
+          from: path.resolve(__dirname, 'src/share/'),
+          to: path.resolve(__dirname, 'docs/share/')
+        }
+      ]
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css'
@@ -134,27 +140,50 @@ module.exports = {
 
     // Article
     new HtmlWebpackPlugin({
-      template: './src/places/metro.html',
-      filename: './places/metro.html',
+      template: './src/places/moskva_istor.html',
+      filename: './places/moskva_istor.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/legends/metro_2.html',
-      filename: './legends/metro_2.html',
+      template: './src/legends/podval_tk.html',
+      filename: './legends/podval_tk.html',
       chunks: ['index']
     }),
 
     new HtmlWebpackPlugin({
-      template: './src/characters/sculpture_dog.html',
-      filename: './characters/sculpture_dog.html',
+      template: './src/characters/krovavaya_barinya.html',
+      filename: './characters/krovavaya_barinya.html',
       chunks: ['index']
     }),
+
+    new HtmlWebpackPlugin({
+      template: './src/tips/nos_sobaki.html',
+      filename: './tips/nos_sobaki.html',
+      chunks: ['index']
+    }),
+
     // Partials
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/menu.html'),
+        location: 'menu',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       }

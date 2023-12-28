@@ -1,0 +1,44 @@
+div.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Pragmatica;
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.8vw;
+  }
+
+  .text {
+    width: 34vw;
+    font-size: 1.25vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8vw;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  a:hover svg {
+    opacity: 0.8;
+  }
+
+  svg {
+    height: 100%;
+  }
+
+  .search svg {
+    height: 1.4vw;
+    padding-top: 0.8vw;
+  }
+}
